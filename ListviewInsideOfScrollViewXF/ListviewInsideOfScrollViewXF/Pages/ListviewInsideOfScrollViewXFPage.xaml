@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:ListviewInsideOfScrollViewXF" 
+		x:Class="ListviewInsideOfScrollViewXF.ListviewInsideOfScrollViewXFPage">
+	<StackLayout Padding="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+		<local:AndroidScrollViewRender  Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<StackLayout HorizontalOptions="FillAndExpand">
+				<StackLayout Orientation="Horizontal">
+								<Label Text="Name" WidthRequest="100" TextColor="Black"></Label>
+								<Label Text="LastName" WidthRequest="100" TextColor="Black"></Label>
+								<Label Text="Age" WidthRequest="100" TextColor="Black"></Label>
+								<Label Text="School"  WidthRequest="100" TextColor="Black"></Label>
+								<Label Text="Country"  WidthRequest="100" TextColor="Black"></Label>
+				</StackLayout>
+				<ListView x:Name="myListView" VerticalOptions="FillAndExpand" ItemsSource="{Binding DataItems}">
+				</ListView>
+			</StackLayout>
+		</local:AndroidScrollViewRender>
+	</StackLayout>
+</ContentPage>
